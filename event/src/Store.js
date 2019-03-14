@@ -9,7 +9,8 @@ const initialState = {
   username: "",
   is_login: false,
   listNews: [],
-  listNewsNew: []
+  listNewsNew: [],
+  listEvents: []
 };
 
 export const store = createStore(initialState);
@@ -63,29 +64,18 @@ export const actions = store => ({
       )
       .catch(function(error) {});
   },
-  searchNews : async (value, keyword) => {
-    if (keyword.length > 2) {
-      try {
-        const response = await axios.get(
-          "https://newsapi.org/v2/everything?q=" + keyword + "&apiKey=79ea232ad60645a8a122c07c03321932"
-        );
-        console.log(response);
-        store.setState({ listNews: response.data.articles });
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  },
-  searchCategory : async (value, keyword) => {
-    console.log("searchCategory", value);
-    try {
-      const response = await axios.get(
-        "https://newsapi.org/v2/everything?q=" + keyword + "&apiKey=79ea232ad60645a8a122c07c03321932"
-      );
-      console.log(response);
-      store.setState({listNews: response.data.articles });
-    } catch (error) {
-      console.log(error);
-    }
-  } 
+  getEvents: async state => {
+    const data = {
+      listEvents: state.listEvents
+    };
+    await axios
+    .get("http://api.eventful.com/json/events/search?app_key=r9Qx5XGnmjct7CMF&location=indonesia&date=future")
+    .then ( response => {
+        store.setState({
+            listEvents: response.data.events.event
+            });
+        console.log("hasil ambil", this.listEvents);
+        }) 
+    .catch(function(error) {});
+  }
 });

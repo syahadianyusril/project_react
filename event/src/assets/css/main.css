@@ -1,0 +1,416 @@
+html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .container {
+    max-width: 960px;
+  }
+  
+  .pricing-header {
+    max-width: 700px;
+  }
+  
+  .card-deck .card {
+    min-width: 220px;
+  }
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+  @import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,900');
+  @media (min-width: 1281px) {
+    
+      .bg {
+          background-size: 100%;
+      }
+      
+    }
+  @media (min-width: 600px) {
+      .nav .justify-content-center {
+          right: 0%;
+      }
+  }
+  
+  body {
+      font-family: 'Muli', sans-serif;
+  }
+  
+  .nav {
+      font-family: 'Muli', sans-serif;
+      font-size: 14px;
+      padding: 30px 30px;
+      font-weight: bold;
+  }
+  
+  header{
+      background-color: white;
+  }
+  
+  .navbar-brand {
+      padding: 0 30px;
+  }
+  
+  .nav-kanan {
+      float: right;
+  }
+  
+  .nav-kanan li {
+      padding: 0 10px;
+  }
+  
+  li {
+      display: block;
+  }
+  
+  .bg {
+      background-image: url(../img/img-header.png);
+      color: white;
+      font-family: 'Muli', sans-serif;
+      background-repeat: no-repeat;
+      min-height: 515px;
+      max-width: 100%;
+  }
+  
+  .pp {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 30px;
+  }
+  
+  .jarakprofil h5 {
+      margin-top: 19px;
+      margin-bottom: 19px;
+  }
+  
+  .bg a {
+      font-weight: 300;
+      font-size: 13px;
+  }
+  
+  .bg h5 {
+      font-weight: 600;
+      font-size: 20px;
+  }
+  
+  .bg h4 {
+      font-weight: 700;
+      font-size: 45px;
+  }
+  
+  .rounded-cirle {
+      border-radius: 50%;
+  }
+  
+  .bg .row .marginprofil {
+      margin-top: 63px;
+  }
+  
+  .marginlogo {
+      margin: 16px 0;
+  }
+  
+  #btn-download {
+      background-color: #F47522;
+      border: #F47522;
+      margin-bottom: 50px;
+  }
+  
+  #btn-submit {
+      background-color: #F47522;
+      border: 1px solid #F47522; 
+      margin-bottom: 50px;
+      color: white;
+  }
+  
+  #btn-submit:hover {
+      background-color: white;
+      color: orange;
+      border: 1px solid orange;
+  }
+  
+  #btn-download:hover {
+      background-color: white;
+      color: #F47522;
+  }
+  
+  .box {
+      margin: 50px 0;
+      height: 100%;
+      width: 100%;
+  }
+  
+  #active {
+      color: #F47522;
+  }
+  
+  .info h1 {
+      font-family: 'Muli', sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+  }
+  
+  .info p {
+      font-size: 14px;
+  }
+  
+  .table-width {
+      width: 388px;
+      font-size: 14px;
+  }
+  
+  .footer {
+      background-color: #19345E;
+      color: white;
+  }
+  
+  #footer {
+      display:table;
+      float: right;
+      padding-right: 107px;
+  }
+  
+  #footer h2 {
+      font-size: 17px;
+      font-weight: bold;
+  }
+  
+  .footer .logo img {
+      margin: 40px 40px 10px 106px;
+  }
+  
+  #footer .follow {
+      color: white;
+      padding: 10px 0 0 0;
+  }
+  
+  #footer a {
+      font-size: 12px;
+      color: inherit;
+  }
+  
+  .marginspan {
+      margin-left: 106px;
+      color: white;
+      font-size: 12px;
+  }
+  
+  #footer .nav-link span {
+      width: 20px;
+      text-align: center;
+      display: inline-block;
+  }
+  
+  #footer .nav-item {
+      color: white;
+  }
+  
+  .contact-us h3 {
+      margin-top: 44px;
+      font-family: 'Muli', sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      padding-left: 13px;
+  }
+  
+  .contact-us p {
+      font-family: 'Muli', sans-serif;
+      font-size: 12px;
+      font-weight: light;
+      padding-left: 14px;
+  }
+  
+  .red {
+      color: red;
+  }
+  
+  /* .box- {} */
+  
+  img.image1{
+      width: 305px 100hh;
+      height: 305px;
+      background: white;
+      /* border: grey solid 1px; */
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 2px solid grey;
+  }
+  
+  .image1{
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+  }
+  .image1:hover{
+      opacity: 0.3;
+  }
+  
+  .contact-us {
+      padding-left: 50px;
+  }
+  
+  .input-group-text {
+      background-color: transparent;
+  }
+  
+  .blink-me {
+      animation: blinker 2s linear infinite;
+    }
+    
+  @keyframes blinker {
+    50% {
+      color: white;
+    }
+  }
+  
+  .contact-left-container {
+      background-image: url(../img/side-view.jpg);
+      background-color: #19345E;
+      background-blend-mode: multiply;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  
+  .contact-logo-position {
+      margin: 300px 0 0 175px;
+  }
+  
+  #no-border {
+      border-radius: 0;
+  }
+  /* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .display-4 {
+      font-size: 3rem;
+    }
+  }
+  
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+  
+  .nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .nav-scroller .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+  }
+  
+  .card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .flex-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  
+  .h-250 { height: 250px; }
+  @media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+  }
+  
+  /*
+   * Blog name and description
+   */
+  .blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .blog-description {
+    font-size: 1.1rem;
+    color: #999;
+  }
+  
+  @media (min-width: 40em) {
+    .blog-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+    border-radius: 2rem;
+  }
+  
+  /*
+   * Blog posts
+   */
+  .blog-post {
+    margin-bottom: 4rem;
+  }
+  .blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+  
+  /*
+   * Footer
+   */
+  .blog-footer {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+  }
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
+
+  

@@ -6,14 +6,16 @@ const Navigation = props => {
   return (
     <div class="container-fluid py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
-        <div class="col-4 pt-1">
-          <a class="text-muted" href="#">Home</a>
+        <div class="col-4">
+          <Link to="/" className="btn btn-sm btn-outline-secondary">Home</Link>- 
+          <Link to="/kalendar" className="btn btn-sm btn-outline-secondary">Event</Link>
         </div>
         <div class="col-4 text-center">
-          <a class="blog-header-logo text-dark" href="#">Events</a>
+          <Link to="/" className="blog-header-logo text-dark">Events</Link>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
-          <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          <Link to="/profil" className="btn btn-sm btn-outline-secondary">Profile</Link> - 
+          <Link to="/signin" className="btn btn-sm btn-outline-secondary">Sign In</Link>
         </div>
       </div>
     </div>

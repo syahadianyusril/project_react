@@ -3,16 +3,17 @@ import {Route, Switch} from "react-router-dom";
 
 import App from "./App"
 import AppNotMatch from "./AppNotMatch";
-// import Signin from "./signin/Signin";
-// import AppBlog from "./AppBlog"
-// import AppGallery from "./AppGallery"
-// import AppContact from "./AppContact"
-// import Profil from "./profil/Profil"
+import AppSignIn from "./AppSignIn";
+import AppProfil from "./AppProfil"
+import AppKalendar from "./AppKalendar";
 
 const MainRoute = () => {
   return (
     <Switch>
       <Route exact path="/" component={App}></Route>
+      <Route exact path="/signin" component={AppSignIn}></Route>
+      <Route exact path="/profil" component={AppProfil}></Route>
+      <Route exact path="/kalendar" component={AppKalendar}></Route>
       <Route component={AppNotMatch}></Route>  
     </Switch>
   )

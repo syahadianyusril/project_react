@@ -10,7 +10,9 @@ const initialState = {
   is_login: false,
   listNews: [],
   listNewsNew: [],
-  listEvents: []
+  listEvents: [],
+  categori:"",
+  dateCari: ""
 };
 
 export const store = createStore(initialState);
@@ -38,7 +40,7 @@ export const actions = store => ({
             full_name: state.username,
             email: state.email
           });
-          console.log(state.username);
+          console.log(state.username, state.is_login);
         }
       })
       .catch(function(error) {
@@ -46,24 +48,6 @@ export const actions = store => ({
       });
   },
 
-  newsBlog: async state => {
-    const data = {
-      listNews: state.listNews,
-      listNewsNew: state.listNewsNew
-    };
-    await axios
-      .all([
-        axios.get("https://newsapi.org/v2/everything?q=indonesia&apiKey=79ea232ad60645a8a122c07c03321932"), 
-        axios.get("https://newsapi.org/v2/top-headlines?country=id&apiKey=79ea232ad60645a8a122c07c03321932")
-      ])
-      .then(
-        axios.spread(function(response1, response2) {
-          store.setState({ listNews: response1.data.articles });
-          store.setState({ listNewsNew: response2.data.articles });
-        })
-      )
-      .catch(function(error) {});
-  },
   getEvents: async state => {
     const data = {
       listEvents: state.listEvents
@@ -77,5 +61,64 @@ export const actions = store => ({
         console.log("hasil ambil", this.listEvents);
         }) 
     .catch(function(error) {});
-  }
+  },
+
+  searchEvents : async (value, keyword) => {
+    if (keyword.length > 2) {
+      try {
+        const response = await axios.get(
+          "http://api.eventful.com/json/events/search?app_key=r9Qx5XGnmjct7CMF&location=" + keyword + "&date=future" 
+        );
+        console.log("aaaaaaaaaa", keyword)
+        console.log("bbbbb", response);
+        store.setState({ listEvents: response.data.events.event });
+        console.log("cccc", store.getState().listEvents);
+
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    else{
+      try {
+        const response = await axios.get("http://api.eventful.com/json/events/search?app_key=r9Qx5XGnmjct7CMF&location=indonesia&date=future"
+          );
+        console.log("aaaaaaaaaa", keyword)
+        console.log("bbbbb", response);
+        store.setState({ listEvents: response.data.events.event });
+        console.log("cccc", store.getState().listEvents);
+
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  },
+  searchCategory : async (value, keyword) => {
+
+    try {
+      const response = await axios.get(
+        "http://api.eventful.com/json/events/search?app_key=r9Qx5XGnmjct7CMF&category=" + keyword + "&date=future"
+      );
+      console.log(response);
+      store.setState({listEvents: response.data.events.event });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  searchEventDate : async (value, keyword) => {
+    var tahun  = keyword.slice(0,4) 
+    var bulan = keyword.slice(5,7)
+    var tanggal = keyword.slice(8,10)
+    var tanggal1 = parseInt(tanggal) + 1
+    var jadi = tahun + bulan + tanggal + "00-" + tahun + bulan + tanggal1.toString() + "00"
+    console.log("jadi",jadi)
+    try {
+      const response = await axios.get(
+        "http://api.eventful.com/json/events/search?app_key=r9Qx5XGnmjct7CMF&location=indonesia&date=" + jadi
+      );
+      console.log(response);
+      store.setState({listEvents: response.data.events.event });
+    } catch (error) {
+      console.log(error);
+    }
+  }  
 });

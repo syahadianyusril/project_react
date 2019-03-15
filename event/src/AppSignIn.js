@@ -1,5 +1,6 @@
 import React, {Component}from 'react';
 import { connect } from "unistore/react";
+import { actions } from "./Store";
 import { withRouter } from "react-router-dom";
 import ContentSignIn from './signin/Signin.js';
 
@@ -14,5 +15,6 @@ class AppSignIn extends Component {
   }    
 
 export default connect(
-  "is_login"
+  "is_login",
+  actions
 )(withRouter(AppSignIn));

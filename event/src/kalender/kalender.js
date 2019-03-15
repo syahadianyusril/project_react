@@ -11,7 +11,7 @@ class Holidays extends Component {
     const date = this.props.date;
     const sliceDate = date.slice(0,10);
     return (
-            <div class="col-md-4">
+            <div class="col-md-4" style={{textAlign: "center"}}>
 
                 <span>{this.props.free}/{sliceDate}</span>
             </div>

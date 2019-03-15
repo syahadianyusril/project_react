@@ -4,9 +4,8 @@ class MonthSearch extends Component {
   render() {
     return (
       <div class="container-fluid">
-          <hr></hr>
           <nav class="navbar">
-            <form class="form-inline container">
+            <form class="form-inline container d-flex justify-content-center">
               <select name="bulan" class="custom-select col-md-4 col-sm-6" id="inputGroupSelect01" 
               onChange={e => this.props.search(e)}
                 value={this.props.bulan}>

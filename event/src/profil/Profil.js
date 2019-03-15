@@ -5,11 +5,10 @@ import { actions } from "../Store";
 import { withRouter, Redirect } from "react-router-dom";
 
 class ContentProfil extends Component {
-  
   render() {
     if (!this.props.is_login) {
-      console.log("login status", this.props.is_login)
-      return <Redirect to = {{pathname: "/signin"}} />;
+      console.log("login status", this.props.is_login);
+      return <Redirect to={{ pathname: "/signin" }} />;
     } else {
       return (
         <div class="container-fluid">
@@ -17,37 +16,42 @@ class ContentProfil extends Component {
           <div class="container">
             <main class="profile">
               <div class="profile-bg" />
-              <section class="container">
-                <aside class="profile-image">
-                  <a class="camera" href="#">
-                    <i class="fas fa-camera" />
-                  </a>
-                </aside>
-                <section class="profile-info">
-                  <h1 class="first-name" />
-                  <h1 class="second-name" />
-                  <h2>My Profile</h2>
-                  <h2>Fahmi Fatma Isha</h2>
-                  <p>
-                    hello hello, I'm Fahmi Fatma Isha, students of software engineering at Alterra 🌼 ; 🌱 happy to be here! 🌿
-                    let's code the best we can!
-                  </p>
-
-                  <aside class="social-media-icons">
-                    <a href="https://twitter.com/zephybite" target="_blank">
-                      <i class="fab fa-twitter" />
-                    </a>
-                    <a href="https://codepen.io/zephyo" target="_blank">
-                      <i class="fab fa-codepen" />
-                    </a>
-                    <a href="https://github.com/zephyo" target="_blank">
-                      <i class="fab fa-github" />
-                    </a>
-                    <a href="https://medium.com/@zephyo" target="_blank">
-                      <i class="fab fa-medium" />
+              <section class="container row">
+                <div class="col-md-8">
+                  <aside class="profile-image">
+                    <a class="camera" href="#">
+                      <i class="fas fa-camera" />
                     </a>
                   </aside>
-                </section>
+                </div>
+                <div>
+                  <section class="profile-info">
+                    <h1 class="first-name" />
+                    <h1 class="second-name" />
+                    <h2>My Profile</h2>
+                    <h2>Fahmi Fatma Isha</h2>
+                    <p>
+                      hello hello, I'm Fahmi Fatma Isha, students of software
+                      engineering at Alterra 🌼 ; 🌱 happy to be here! 🌿 let's
+                      code the best we can!
+                    </p>
+
+                    <aside class="social-media-icons">
+                      <a href="https://twitter.com/zephybite" target="_blank">
+                        <i class="fab fa-twitter" />
+                      </a>
+                      <a href="https://codepen.io/zephyo" target="_blank">
+                        <i class="fab fa-codepen" />
+                      </a>
+                      <a href="https://github.com/zephyo" target="_blank">
+                        <i class="fab fa-github" />
+                      </a>
+                      <a href="https://medium.com/@zephyo" target="_blank">
+                        <i class="fab fa-medium" />
+                      </a>
+                    </aside>
+                  </section>
+                </div>
               </section>
               <section class="statistics">
                 <p>

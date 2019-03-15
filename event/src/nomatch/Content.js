@@ -4,9 +4,9 @@ import "../assets/css/404.css";
 class ContentNotMatch extends Component {
   render() {
     return (
-      <div class="container">
+      <div class="container-fluid">
         <section id="not-found container">
-          <div id="title">Simple Pure CSS3 &bull; 404 Error Page</div>
+          <div id="title">404</div>
           <div class="circles">
             <p>404<br></br>
              <small>PAGE NOT FOUND</small>

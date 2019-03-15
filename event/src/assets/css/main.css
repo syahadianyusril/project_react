@@ -413,4 +413,12 @@ html {
     margin-bottom: 0;
   }
 
-  
+  .slider-background {
+      background-image: url("../img/concert.jpg");
+      /* background-repeat: no-repeat; */
+      background-size: cover;
+  }
+
+  .judul {
+      text-shadow: 2px 2px black;
+  }

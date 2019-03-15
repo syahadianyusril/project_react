@@ -64,7 +64,7 @@ class AppKalendar extends Component {
           <div class="container-fluid">
             <hr />
 
-            <div class="row">
+            <div class="row" >
               {listEvents.map((item, key) => {
                 var created = item.created;
                 var created1 = created.slice(0, 10);

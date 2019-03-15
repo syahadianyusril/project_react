@@ -10,13 +10,13 @@ const Navigation = props => {
   if (!props.is_login) {
     return (
       <div class="container-fluid py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-          <div class="col-4">
+        <div class="row flex-nowrap justify-content-between align-items-center" >
+          <div class="col-4" >
             <Link to="/" className="btn btn-sm btn-outline-secondary">Home</Link>- 
             <Link to="/kalendar" className="btn btn-sm btn-outline-secondary">Event</Link>
           </div>
           <div class="col-4 text-center">
-            <Link to="/" className="blog-header-logo text-dark">Events</Link>
+            <Link to="/" className="blog-header-logo text-dark">Skuylah</Link>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             {/* <Link to="/profil" className="btn btn-sm btn-outline-secondary">Profile</Link> -  */}
